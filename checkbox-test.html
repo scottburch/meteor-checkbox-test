@@ -1,0 +1,24 @@
+<head>
+  <title>checkbox-test</title>
+</head>
+
+<body>
+    <p>
+        Here is a test of the preserve checkbox that demonstrates the second re-render problem.  A count will cause the redraw on update.
+    </p>
+    <ol>
+        <li>Click the checkbox</li>
+        <li>Click Update</li>
+        <li>Checkbox is preserved</li>
+        <li>Click Update again</li>
+        <li>Checkbox is not preserved</li>
+    </ol>
+    {{> form}}
+</body>
+
+<template name="form">
+    <input type="text" name="count" value="{{count}}"/>
+    <input type="text" name="aTextbox" value="texbox"/>
+    <input type="checkbox" name="aCheckbox"/>
+    <button id="update">Update</button>
+</template>
